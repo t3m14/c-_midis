@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,11 +30,21 @@ namespace ConsoleApp3
             {
                 for (int j = 0; j < m; ++j)
                 {
-                    if (i == j)
+                    
+                    if (i < n - 1 - j)
+                    {
+                        mas[i, j] = "0";
+                    }
+                    else if (i > n - 1 - j)
+                    {
+                        mas[i, j] = "2";
+                    }
+                    else
                     {
                         mas[i, j] = "1";
-
                     }
+
+                 
 
                 }
             }
@@ -44,9 +54,9 @@ namespace ConsoleApp3
             {
                 for (int j = 0; j < m; ++j)
                 {
-                    Console.Write(mas[i, j] + "\t");
+                    Console.Write(mas[i, j]+ " ");
                 }
-                Console.WriteLine("\n");
+                Console.WriteLine();
             }
             Console.ReadKey();
         }
